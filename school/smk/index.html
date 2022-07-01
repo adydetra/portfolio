@@ -24,9 +24,26 @@
     <link href="../dist/css/d-tailwind.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> 
     <script src="../dist/js/vue.js"></script>
-    <script type="text/javascript" src="../dist/js/vue-gallery-slideshow.min.js"></script>
+    <script src="../dist/js/vue-gallery-slideshow.min.js" type="text/javascript" ></script>
+    <script src="../../js/jquery.js"></script>
   </head>
   <body>
+
+    <!-- PreLoader -->
+    <section>
+      <div id="preloader">
+          <div id="ctn-preloader" class="ctn-preloader">
+              <div class="animation-preloader">
+                  <div class="spinner"></div>
+                      <div class="txt-loading">
+                  </div>
+              </div>	
+              <div class="loader-section section-left"></div>
+              <div class="loader-section section-right"></div>
+          </div>
+      </div>
+    </section>
+
     <section class="container mx-auto pt-4" id="app">
       <a class="m-4 text-sm text-black-600" href="../../">&laquo; Back</a>
       <a class="m-4 text-sm text-red-600 underline decoration-dashed underline-offset-4" href="../sd/">SD</a>
@@ -305,6 +322,26 @@
           index: null
         }
       })
+    </script>
+
+    <script>
+      //PreLoader
+      $(document).ready(function() {
+        
+        setTimeout(function() {
+          $('#ctn-preloader').addClass('loaded');
+          // Una vez haya terminado el preloader aparezca el scroll
+          $('html').removeClass('no-scroll-y');
+      
+          if ($('#ctn-preloader').hasClass('loaded')) {
+            // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
+            $('#preloader').delay(1000).queue(function() {
+              $(this).remove();
+            });
+          }
+        }, 3000);
+        
+      });
     </script>
   </body>
 </html>

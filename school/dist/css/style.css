@@ -54,3 +54,89 @@ img {
     width: 100%;
     height: 100%;
 }
+
+/*-------------------------------------------------------------------
+[4. PreLoader]
+*------------------------------------------------------------------*/
+.no-scroll-y {
+	overflow-y: hidden !important;
+}
+
+.ctn-preloader {
+	align-items: center;
+	cursor: none;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 900;
+}
+
+.ctn-preloader .animation-preloader {
+	position: absolute;
+  	z-index: 100;
+}
+
+.ctn-preloader .animation-preloader .spinner {
+	animation: spinner 1s infinite linear;
+	border-radius: 50%;
+	border: 3px solid rgba(0, 0, 0, 0.2);
+	border-top-color: #F85B21;
+	height: 5em;
+	margin: 0 auto 3.5em auto;
+	width: 5em;
+}
+
+.ctn-preloader .loader-section {
+	background-color: #ffffff;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	width: calc(50% + 1px);
+}
+
+.ctn-preloader .loader-section.section-left {
+	left: 0;
+}
+
+.ctn-preloader .loader-section.section-right {
+	right: 0;
+}
+
+.loaded .animation-preloader {
+	opacity: 0;
+	transition: 0.3s ease-out;
+}
+
+.loaded .loader-section.section-left {
+	transform: translateX(-101%);
+	transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+
+.loaded .loader-section.section-right {
+	transform: translateX(101%);
+	transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+
+@keyframes spinner {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.ctn-preloader .animation-preloader .spinner {
+		height: 8em;
+		width: 8em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.ctn-preloader .animation-preloader .spinner {
+		height: 7em;
+		width: 7em;
+	}
+}
