@@ -320,11 +320,13 @@
 
     </div>
   
-  <!-- Footer -->
-  <div class="container mb-5" id="footer">
-    <div class="row">
+    <!-- Footer -->
+    <div class="container" id="footer">
+        <div class="row">
       <div class="col-md-8 col-sm-12">
-        <p>Adityawarman Dewa Putra - &copy; 2020 - <b id="tanggal" style="font-weight: 300 !important;"></b>&nbsp;| <a href="https://saweria.co/AdityawarmanDewaP" target="_blank">Support Me</a></p>
+        <p>&copy; 2020 - <b id="tanggal" style="font-weight: 300 !important;"></b>
+          &nbsp;| <a href="https://dewa-tools.netlify.app/" target="_blank">Tools</a>
+          &nbsp;| <a href="https://saweria.co/AdityawarmanDewaP" target="_blank">Support Me</a></p>
       </div>
       <div class="col-md-4 col-sm-12">
         <p>Thank you for visit my website <img src="images/heart.gif" alt="Heart"> </p>
@@ -349,11 +351,9 @@
       
       setTimeout(function() {
         $('#ctn-preloader').addClass('loaded');
-        // Una vez haya terminado el preloader aparezca el scroll
         $('html').removeClass('no-scroll-y');
     
         if ($('#ctn-preloader').hasClass('loaded')) {
-          // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
           $('#preloader').delay(1000).queue(function() {
             $(this).remove();
           });
