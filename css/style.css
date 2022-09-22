@@ -328,7 +328,7 @@ button:active,button:hover,button:focus {
 	text-align: center;
 	color: #fff;
 	overflow: hidden; 
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif !important;
 	font-size: 5vh;
 	font-weight: 900;
 	line-height: 1.15;
@@ -520,7 +520,7 @@ body.nav-active .nav__list-item:nth-child(10) {
     font-size: 40px;
     font-weight: 700;
     text-align: start;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     letter-spacing: 3px;
 }
 
