@@ -37,17 +37,17 @@ IZIN TERLEBIH DAHULU. TERIMAKASIH :)
 *------------------------------------------------------------------*/
 @font-face {
     font-family: 'Montserrat';
-    src: url('../Fonts/Montserrat.woff2');
+    src: url('../fonts/Montserrat.woff2');
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../Fonts/Poppins.woff2');
+    src: url('../fonts/Poppins.woff2');
 }
 
 @font-face {
     font-family: 'slick'; 
-    src: url('../Fonts/slick.woff');
+    src: url('../fonts/slick.woff');
 }
 
 ::-webkit-scrollbar {
