@@ -898,11 +898,13 @@ body.nav-active .nav__list-item:nth-child(10) {
     transition: all 200ms linear;
     background-color: #313131;
 }
+
 .progress-wrap.active-progress {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);
 }
+
 .progress-wrap::after {
 	position: absolute;
 	font-family: 'icomoon' !important;
@@ -921,9 +923,11 @@ body.nav-active .nav__list-item:nth-child(10) {
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
+
 .progress-wrap:hover::after {
 	opacity: 0;
 }
+
 .progress-wrap::before {
 	position: absolute;
 	font-family: 'icomoon' !important;
@@ -945,12 +949,15 @@ body.nav-active .nav__list-item:nth-child(10) {
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
+
 .progress-wrap:hover::before {
 	opacity: 1;
 }
+
 .progress-wrap svg path { 
 	fill: none; 
 }
+
 .progress-wrap svg.progress-circle path {
 	stroke: #F85B21;
 	stroke-width: 4;

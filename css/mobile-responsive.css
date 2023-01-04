@@ -143,6 +143,19 @@ IZIN TERLEBIH DAHULU. TERIMAKASIH :)
         margin-bottom: 3rem;
     }
 
+    #contact ul li {
+        width: 40px;
+        height: 40px;
+    }
+
+    #contact ul a {
+        font-size: 16px;
+    }
+
+    #contact ul a:nth-child(3) {
+        font-size: 18px;
+    }
+
     /*-------------------------------------------------------------------
     [9. Footer]
     *------------------------------------------------------------------*/
