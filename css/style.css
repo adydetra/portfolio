@@ -927,10 +927,10 @@ body.nav-active .nav__list-item:nth-child(10) {
 .progress-wrap::before {
 	position: absolute;
 	font-family: 'icomoon' !important;
-	content: '\e90b';
+	content: '\f077';
 	text-align: center;
-	line-height: 46px;
-	font-size: 20px;
+	line-height: 42px;
+	font-size: 16px;
 	opacity: 0;
 	background-image: linear-gradient(298deg, var(--red), var(--yellow));
 	-webkit-background-clip: text;
