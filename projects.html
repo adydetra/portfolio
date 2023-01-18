@@ -92,7 +92,7 @@
         <!-- Title -->
         <h1 class="h3 ml-3 mt-5">-| DEVELOPMENT ~</h1>
         <div class="row">
-            <div :class="develop.col" v-for="develop in visibleCompanies" :key="develop.id">
+            <div :class="develop.col" v-for="develop in visibleDevelop" :key="develop.id">
                 <div class="card px-3">
                     <a :id="develop.demoid" :href="develop.modal"><img :src="develop.imgbg" width="100%" alt="pict"></a>
                     <div :id="develop.modalid">
@@ -119,65 +119,21 @@
         <h1 class="h3 ml-3 mt-5 pt-3">-| DESIGN ~</h1>
         <div class="row">
 
-            <div class="col-sm-4 my-5">
+            <div :class="design.col" v-for="design in visibleDesign" :key="design.id">
                 <div class="card px-3">
-                    <a id="design01" href="#design-01"><img src="images/projects/bg-project-design1.jpg" width="100%" alt="pict"></a>
-                    <div id="design-01">
-                        <div id="btn-close-modal" class="close-design-01"> 
-                            <img class="closebt" src="images/close.svg" alt="close">
+                    <a :id="design.demoid" :href="design.modal"><img :src="design.imgbg" width="100%" alt="pict"></a>
+                    <div :id="design.modalid">
+                        <div  id="btn-close-modal" :class="design.modalclose"> 
+                            <img class="closebt" :src="design.imgclose" alt="close">
                         </div>
                         
                         <div class="modal-content">
-                            <p class="d-flex justify-content-center align-items-center mb-4"><img class="mr-2" src="images/icon/web.svg" alt="Icon">Website</p>
-                            <img src="images/projects/design/tapply/1.jpg" alt="image">
+                            <p class="d-flex justify-content-center align-items-center mb-4"><img class="mr-2" :src="design.imgicon" alt="Icon">{{ design.description }}</p>
+                            <img :src="design.imgproject" alt="image">
                         </div>
 
-                        <div id="btn-close-modal" class="close-design-01"> 
-                            <img class="closebt" src="images/close.svg" alt="close">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 my-5">
-                <div class="card px-3">
-                    <a id="design02" href="#design-02"><img src="images/projects/bg-project-design2.jpg" width="100%" alt="pict"></a>
-                    <div id="design-02">
-                        <div id="btn-close-modal" class="close-design-02"> 
-                            <img class="closebt" src="images/close.svg" alt="close">
-                        </div>
-                        
-                        <div class="modal-content">
-                            <p class="d-flex justify-content-center align-items-center mb-4"><img class="mr-3" src="images/icon/java.svg" alt="Icon">Dekstop Software</p>
-                            <img class="mb-3" src="images/projects/design/perpus/1.jpg" alt="image">
-                            <img class="mb-3" src="images/projects/design/perpus/2.jpg" alt="image">
-                            <img class="mb-3" src="images/projects/design/perpus/3.jpg" alt="image">
-                            <img class="mb-3" src="images/projects/design/perpus/4.jpg" alt="image">
-                            <img class="mb-3" src="images/projects/design/perpus/5.jpg" alt="image">
-                            <img class="mb-3" src="images/projects/design/perpus/6.jpg" alt="image">
-                        </div>
-
-                        <div id="btn-close-modal" class="close-design-02"> 
-                            <img class="closebt" src="images/close.svg" alt="close">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4 my-5">
-                <div class="card px-3">
-                    <a id="design03" href="#design-03"><img src="images/projects/bg-project-design3.jpg" width="100%" alt="pict"></a>
-                    <div id="design-03">
-                        <div id="btn-close-modal" class="close-design-03"> 
-                            <img class="closebt" src="images/close.svg" alt="close">
-                        </div>
-                        
-                        <div class="modal-content">
-                            <p class="d-flex justify-content-center align-items-center mb-4"><img class="mr-2" src="images/icon/web.svg" alt="Icon">Website</p>
-                            <img class="mb-3" src="images/projects/design/cebong-bhizer/1.jpg" alt="image">
-                            <img class="mb-3" src="images/projects/design/cebong-bhizer/2.jpg" alt="image">
-                        </div>
-
-                        <div id="btn-close-modal" class="close-design-03"> 
-                            <img class="closebt" src="images/close.svg" alt="close">
+                        <div id="btn-close-modal" :class="design.modalclose"> 
+                            <img class="closebt" :src="design.imgclose" alt="close">
                         </div>
                     </div>
                 </div>

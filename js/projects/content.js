@@ -2,7 +2,7 @@ const vm = new Vue({
     el: '#app',
     data() {
         return { 
-            companies: [
+            develop: [
                 {
                     demoid: "demo01", modalid: "modal-01", modal: "#modal-01", modalclose: "close-modal-01",
                     imgproject: "images/projects/project1.png", imgbg: "images/projects/bg-project1.jpg",
@@ -71,8 +71,34 @@ const vm = new Vue({
                     demoid: "demo09", modalid: "modal-09", modal: "#modal-09", modalclose: "close-modal-09",
                     imgproject: "images/projects/project9.png", imgbg: "images/projects/bg-project9.png",
                     description: "Personal - Bang CV",
-                    col: "col-sm-6 my-5",
+                    col: "col-sm-6 d-flex justify-content-center mx-auto my-5",
                     imgicon: "images/icon/personal.svg",
+                    imgclose: "images/close.svg"
+                },
+            ],
+            design: [
+                {
+                    demoid: "design01", modalid: "design-01", modal: "#design-01", modalclose: "close-design-01",
+                    imgproject: "images/projects/design/tapply/1.jpg", imgbg: "images/projects/bg-project-design1.jpg",
+                    description: "Website",
+                    col: "col-sm-4 my-5",
+                    imgicon: "images/icon/web.svg",
+                    imgclose: "images/close.svg"
+                },
+                {
+                    demoid: "design02", modalid: "design-02", modal: "#design-02", modalclose: "close-design-02",
+                    imgproject: "images/projects/design/perpus/1.jpg", imgbg: "images/projects/bg-project-design2.jpg",
+                    description: "Dekstop Software",
+                    col: "col-sm-4 my-5",
+                    imgicon: "images/icon/java.svg",
+                    imgclose: "images/close.svg"
+                },
+                {
+                    demoid: "design03", modalid: "design-03", modal: "#design-03", modalclose: "close-design-03",
+                    imgproject: "images/projects/design/cebong-bhizer/1.jpg", imgbg: "images/projects/bg-project-design3.jpg",
+                    description: "Website",
+                    col: "col-sm-4 my-5",
+                    imgicon: "images/icon/web.svg",
                     imgclose: "images/close.svg"
                 },
             ],
@@ -80,8 +106,11 @@ const vm = new Vue({
         }
     },
     computed: {
-        visibleCompanies() {
-        return this.companies.slice(0, this.companiesVisible)
+        visibleDevelop() {
+            return this.develop.slice(0, this.developVisible)
+        },
+        visibleDesign() {
+            return this.design.slice(0, this.designVisible)
         }
     }
 })
