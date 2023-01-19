@@ -42,6 +42,7 @@ IZIN TERLEBIH DAHULU. TERIMAKASIH :)
 html, body {
     margin: 0;
     padding: 0;
+	background: #FFF !important;
 }
 
 .image {

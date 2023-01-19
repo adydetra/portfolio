@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../dist/css/style.css">
     <link href="../dist/css/d-tailwind.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script> 
-    <script src="../dist/js/vue.js"></script>
+    <script src="../../js/vue.js"></script>
     <script src="../dist/js/vue-gallery-slideshow.min.js" type="text/javascript" ></script>
     <script src="../../js/jquery.js"></script>
   </head>
@@ -51,247 +51,25 @@
       <h1 class="text-3xl w-full text-center pt-14 tracking-widest">- SMK ARCHIVE -</h1>
       <p class="mb-12 text-center mx-auto tracking-widest mt-4">2019 - 2022</p>
 
+      <!-- Guru -->
       <div class="py-8 flex flex-wrap justify-center">
-        <div class="avatar px-10 inline">
-          <div class="w-24 xl:w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <img src="../../images/icon/men.jpg"/>
+        <div class="avatar px-10 inline" v-for="guru in visibleGuru" :key="guru.id">
+          <div :class="guru.class">
+            <img :src="guru.img"/>
           </div>
-          <p class="text-center pt-4">X</p>
-        </div>
-        <div class="avatar px-10 inline">
-          <div class="w-24 xl:w-32 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-4">XI</p>
-        </div>
-        <div class="avatar px-10 inline">
-          <div class="w-24 xl:w-32 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-4 text-error">XII</p>
+          <p :class="guru.classTEXT">{{ guru.kelas }}</p>
         </div>
       </div>
 
+      <!-- Pelajar -->
       <div class="py-8 flex flex-wrap justify-center">
-
         <h1 class="text-3xl w-full text-center pt-12 pb-8 tracking-widest">Siswa / i</h1>
-        <div class="avatar px-6 py-4 inline">
+        <div class="avatar px-6 py-4 inline" v-for="pelajar in visiblePelajar" :key="pelajar.id">
           <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
+            <img :src="pelajar.img"/>
           </div>
-          <p class="text-center pt-2 line-through font-bold">Adam</p>
+          <p :class="pelajar.class">{{ pelajar.nama }}</p>
         </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Dewa</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Agung</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2 line-through font-bold">Bolu</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Aldy</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-2 text-error">Andrea</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-2 text-error">Aulia</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Azkal</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Banny</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Bima</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Daiz</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Bolang</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Zulfikar</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Deni</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-2 text-error">Denur</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Faiz</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-2 text-error">Farah</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Farel</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Febri</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Eko</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Henokh</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Calvin</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-2 text-error">Kristina</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Marwan</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Fariz</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Fathir</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Ikctiar</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Lukman</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Rafli</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Rizky</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/women.jpg"/>
-          </div>
-          <p class="text-center pt-2 text-error">Najwa</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Naufal</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Rafi</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Raihan</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Rendy</p>
-        </div>
-        <div class="avatar px-6 py-4 inline">
-          <div class="w-24 rounded">
-            <img src="../../images/icon/men.jpg"/>
-          </div>
-          <p class="text-center pt-2">Wisnu</p>
-        </div>
-
       </div>
 
       <h1 class="text-3xl w-full text-center pt-12 pb-8 tracking-widest">Album</h1>
@@ -301,40 +79,18 @@
         <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
       </div>
     </section>
-    <script>
-      new Vue({
-        el: '#app',
-        components: {
-          VueGallerySlideshow
-        },
-        data: {
-          images: [
-            {url: 'images/1.jpg'},
-            {url: 'images/2.jpeg'},
-            {url: 'images/3.jpeg'},
-            {url: 'images/4.jpg'},
-            {url: 'images/5.jpg'},
-            {url: 'images/6.jpg'},
-            {url: 'images/7.jpg'},
-            {url: 'images/8.jpg'},
-            {url: 'images/9.jpg'},
-          ],
-          index: null
-        }
-      })
-    </script>
 
+    <script src="../dist/js/content/smk.js"></script>
+    
     <script>
       //PreLoader
       $(document).ready(function() {
         
         setTimeout(function() {
           $('#ctn-preloader').addClass('loaded');
-          // Una vez haya terminado el preloader aparezca el scroll
           $('html').removeClass('no-scroll-y');
       
           if ($('#ctn-preloader').hasClass('loaded')) {
-            // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
             $('#preloader').delay(1000).queue(function() {
               $(this).remove();
             });
@@ -343,5 +99,6 @@
         
       });
     </script>
+
   </body>
 </html>
