@@ -62,7 +62,7 @@ const vm = new Vue({
                 {
                     demoid: "demo08", modalid: "modal-08", modal: "#modal-08", modalclose: "close-modal-08",
                     imgproject: "images/projects/project8.png", imgbg: "images/projects/bg-project8.jpg",
-                    description: "Personal (LSP / Uji Sertifikasi Keahlian BNSP) - E-Commerce",
+                    description: "Personal (LSP / Sertifikasi BNSP) - E-Commerce",
                     col: "col-sm-4 my-5",
                     imgicon: "images/icon/personal.svg",
                     imgclose: "images/close.svg"
