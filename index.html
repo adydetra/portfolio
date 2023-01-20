@@ -147,7 +147,7 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <a href="cv.pdf" download="CV Adityawarman Dewa Putra"><button><span class="icon-download mr-2"></span>Download CV</button></a>
+      <a href="#" class="cv-download" download="CV Adityawarman Dewa Putra"><button><span class="icon-download mr-2"></span>Preview CV</button></a>
     </div>
   </div>
 </div>
@@ -264,6 +264,14 @@
 </body>
 </html>
 <script src="js/script.js"></script>
+
+<script>
+  $('a.cv-download').click(function(e) {
+    e.preventDefault();
+    window.open('dewaprogramming.vercel.app/cv.pdf');
+    window.open('dewaprogramming.vercel.app/cv-ats.pdf');
+});
+</script>
 
 <!-- Scroll Top -->
 <script>
